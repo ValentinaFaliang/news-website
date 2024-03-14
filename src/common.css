@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@400,500,700,900&display=swap');
+
+:root {
+    --red: #FF5533;
+    --white: #FFFF;
+    --grey: #868686;
+    --black: #262A2F;
+
+    --container-width: 1440px;
+    --grid-column-width: 100px;
+    --grid-gap: 20px;
+}
+
+* {
+    all: unset;
+    display: revert;
+}
+
+body {
+    font-family: 'Rubic', sans-serif;
+    background-color: #EBEBEB;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+
+.container {
+    padding: 0 20px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, var(--grid-column-width));
+    gap: var(--grid-gap);
+}
+
+.article-category {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 15px;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.article-source {
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.article-date {
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--red);
+    text-transform: uppercase;
+}
+
+.article-date+.article-source::before {
+    content: ' · ';
+}

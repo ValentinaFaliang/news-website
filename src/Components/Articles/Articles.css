@@ -1,0 +1,12 @@
+.articles {
+    display: grid;
+    margin-bottom: 135px;
+}
+
+.articles__big-colums {
+    grid-column: span 9;
+}
+
+.articles__small-colums {
+    grid-column: 10/-1;
+}
